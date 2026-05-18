@@ -1,12 +1,11 @@
 #include <iostream>
 #include <list>
-
 using namespace std;
 
 int main() {
     list<string> ll;
 
-    // ===== AÑADIR ELEMENTOS =====
+    //AÑADIR ELEMENTOS
     ll.push_back("A"); // equivalente a add()
     ll.push_back("B");
     ll.push_back("C"); // addLast()
@@ -24,7 +23,7 @@ int main() {
     }
     cout << endl;
 
-    // ===== ELIMINACIONES =====
+    //ELIMINACIONES
     // Eliminar por valor
     ll.remove("B");
 

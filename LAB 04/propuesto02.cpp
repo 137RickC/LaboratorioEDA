@@ -24,18 +24,15 @@ public:
     void insertar(int valor) {
 
         Nodo* nuevo = new Nodo(valor);
-
         if (inicio == NULL) {
             inicio = nuevo;
             nuevo->siguiente = inicio;
         } else {
 
             Nodo* aux = inicio;
-
             while (aux->siguiente != inicio) {
                 aux = aux->siguiente;
             }
-
             aux->siguiente = nuevo;
             nuevo->siguiente = inicio;
         }
@@ -44,9 +41,7 @@ public:
     void mostrar() {
 
         Nodo* aux = inicio;
-
         if (inicio != NULL) {
-
             do {
                 cout << aux->dato << " ";
                 aux = aux->siguiente;

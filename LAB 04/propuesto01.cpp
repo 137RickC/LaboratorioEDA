@@ -39,7 +39,6 @@ public:
             nuevo->anterior = aux;
         }
     }
-
     void mostrar() {
         Nodo* aux = inicio;
 

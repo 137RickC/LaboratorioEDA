@@ -5,11 +5,9 @@ using namespace std;
 
 int main() {
     list<string> list;
-
     // Añadir elementos
     list.push_back("Uno, Dos, Tres");
     list.push_back("Cuatro");
-
     // Mostrar elementos (opcional)
     cout << "Lista: ";
     for (const string& e : list) {
@@ -22,6 +20,3 @@ int main() {
 
     return 0;
 }
-
-// g++ ex11.cpp -o ex11
-// ./ex11
