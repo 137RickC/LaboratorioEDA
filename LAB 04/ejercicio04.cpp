@@ -18,7 +18,7 @@ public:
     LinkedList() {
         head = nullptr;
     }
-    // ************ INSERCIÓN ************
+    //INSERCIÓN 
     void insert(int data) {
         Node* new_node = new Node(data);
         if (head == nullptr) {
@@ -31,7 +31,7 @@ public:
             last->next = new_node;
         }
     }
-    // ************ RECORRIDO ************
+    //RECORRIDO
     void printList() {
         Node* currNode = head;
         cout << "\nLinkedList: ";
@@ -41,7 +41,7 @@ public:
         }
         cout << "\n" << endl;
     }
-    // ************ BORRADO POR DATO ************
+    //BORRADO POR DATO
     void deleteByKey(int key) {
         Node* currNode = head;
         Node* prev = nullptr;
@@ -69,7 +69,7 @@ public:
             cout << key << " not found" << endl;
         }
     }
-    // ************ BORRADO POR POSICIÓN ************
+    //BORRADO POR POSICIÓN
     void deleteAtPosition(int index) {
         Node* currNode = head;
         Node* prev = nullptr;
@@ -100,7 +100,7 @@ public:
         cout << index << " position element not found" << endl;
     }
 };
-// ************ FUNCIÓN PRINCIPAL ************
+//FUNCIÓN PRINCIPAL
 int main() {
     LinkedList list;
 
@@ -116,7 +116,7 @@ int main() {
 
     // Mostrar lista inicial
     list.printList();
-    // ===== ELIMINACIÓN POR DATO =====
+    // ELIMINACIÓN POR DATO 
     list.deleteByKey(1); // cabeza
     list.printList();
 
@@ -126,7 +126,7 @@ int main() {
     list.deleteByKey(10); // no existe
     list.printList();
     
-    // ===== ELIMINACIÓN POR POSICIÓN =====
+    //  ELIMINACIÓN POR POSICIÓN 
     list.deleteAtPosition(0); // cabeza
     list.printList();
 

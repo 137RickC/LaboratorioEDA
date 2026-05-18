@@ -1,5 +1,5 @@
 #include <iostream>
-#include <list> // Librería para listas enlazadas
+#include <list> 
 
 using namespace std;
 
