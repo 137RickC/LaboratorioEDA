@@ -8,9 +8,8 @@ int main (){
     //Mostrando la cola
     cout<<"Elementos de la cola: ";
     // verificar sis esta vacia
-    if(q.empty()){
-        cout << "La cola esta vacia "; 
-    }
+    if(q.empty()){ cout << "La cola esta vacia "; }
+    
     cout<< endl;
 
     return 0;

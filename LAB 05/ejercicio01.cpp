@@ -1,7 +1,7 @@
 #include <iostream>
 #include <queue>
-
 using namespace std;
+
 class Stack {
     int top, cap;
     int* a;
@@ -49,40 +49,19 @@ class Stack {
 
 int main() {
 
-    // Cola de prioridad
-    priority_queue<int> pq;
+    Stack s(5);
 
-    // Insertar elementos
-    pq.push(10);
-    pq.push(20);
-    pq.push(15);
-
-    // Mostrar elementos
-    cout << "Cola de prioridad: ";
-
-    priority_queue<int> temp = pq;
-
-    while (!temp.empty()) {
-        cout << temp.top() << " ";
-        temp.pop();
+    s.push(10);
+    s.push(20);
+    s.push(30);
+    
+    cout << s.pop() << " sacado de la pila" << endl;
+    cout << "El elemto en la cima es: " <<  s.peek() << endl;
+    cout << "Elementos presentes en la pila: ";
+    while (!s.isEmpty()){
+        cout<< s.peek() << " ";
+        s.pop();
     }
-
-    cout << endl;
-
-    // Eliminar elemento con mayor prioridad
-    pq.pop();
-
-    // Mostrar cola resultante
-    cout << "Cola despues de eliminar el mayor elemento: ";
-
-    temp = pq;
-
-    while (!temp.empty()) {
-        cout << temp.top() << " ";
-        temp.pop();
-    }
-
-    cout << endl;
-
+    
     return 0;
 }
