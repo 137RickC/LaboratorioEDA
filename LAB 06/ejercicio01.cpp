@@ -44,9 +44,7 @@ class ArbolBinarioOrdenado{
         }
     public:
         //Constructor
-        ArbolBinarioOrdenado(){
-            raiz= nullptr;
-        }
+        ArbolBinarioOrdenado(){ raiz= nullptr; }
         //insertar
         void insertar(int info){
             Nodo* nuevo = new Nodo(info);
@@ -56,11 +54,11 @@ class ArbolBinarioOrdenado{
                 Nodo* reco = raiz;
                 while(reco != nullptr){
                     anterior= reco;
-                    if (info < reco->info){ reco->izq;}
+                    if (info < reco->info){ reco = reco->izq; }
                     else{ reco = reco->der; }
                 }
-                if(info < anterior-> info){anterior -> izq = nuevo; }
-                else{ anterior-> der = nuevo; }
+                if(info < anterior->info){anterior->izq = nuevo; }
+                else{ anterior->der = nuevo; }
             }
         }
         //Metodo publico  Preorden 
