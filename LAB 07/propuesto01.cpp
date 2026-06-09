@@ -140,6 +140,36 @@ public:
         }
         return false;
     }
+    // Búsqueda por rango [inicio, fin]
+    std::vector<std::string> rangeSearch(std::string inicio,
+                                        std::string fin) {
+
+        std::vector<std::string> resultado;
+
+        // Buscar la hoja donde comienza el rango
+        Node* hoja = this->search(inicio);
+
+        while (hoja != nullptr) {
+
+            for (size_t i = 0; i < hoja->values.size(); i++) {
+
+                if (hoja->values[i] >= inicio &&
+                    hoja->values[i] <= fin) {
+
+                    resultado.push_back(hoja->values[i]);
+                }
+
+                // Si ya superamos el límite superior, terminamos
+                if (hoja->values[i] > fin) {
+                    return resultado;
+                }
+            }
+
+            hoja = hoja->nextKey;
+        }
+
+        return resultado;
+    }
 
     // Insertando en el padre
     void insertInParent(Node* n, std::string value, Node* ndash) {
@@ -249,26 +279,31 @@ void printTree(BplusTree* tree) {
 
 // Código Driver (main)
 int main() {
-    BplusTree* bplusTree = new BplusTree(3);
 
-    // Al pasar un "new Node(3)" como puntero de datos, lo asignamos dinámicamente
+    BplusTree* bplusTree =
+        new BplusTree(3);
+
     bplusTree->insert("5", new Node(3));
     bplusTree->insert("15", new Node(3));
     bplusTree->insert("25", new Node(3));
     bplusTree->insert("35", new Node(3));
     bplusTree->insert("45", new Node(3));
+    bplusTree->insert("55", new Node(3));
+    bplusTree->insert("65", new Node(3));
 
-    printTree(bplusTree);
-    // Creamos un nodo temporal para la búsqueda
-    Node* searchNode = new Node(3);
-    if (bplusTree->find("5", searchNode)) {
-        std::cout << "Encontrado" << std::endl;
-    } else {
-        std::cout << "No encontrado" << std::endl;
+    std::vector<std::string> rango =
+        bplusTree->rangeSearch("15", "55");
+
+    std::cout
+        << "Valores entre 15 y 55:\n";
+
+    for (const auto& valor : rango) {
+        std::cout << valor << " ";
     }
 
-    // Limpieza final de memoria
-    delete searchNode;
+    std::cout << std::endl;
+
     delete bplusTree;
+
     return 0;
 }
