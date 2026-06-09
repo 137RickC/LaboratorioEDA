@@ -17,13 +17,10 @@ public:
         height = 1;
     }
 };
-
 // Clase Árbol AVL
 class AVLTree {
-
 private:
     Nodo* root;
-
     // Obtener altura del árbol
     int height(Nodo* N) {
 
@@ -157,7 +154,6 @@ private:
     }
 
 public:
-
     // Constructor
     AVLTree() {
         root = nullptr;
@@ -177,7 +173,6 @@ public:
 
 // Función principal
 int main() {
-
     AVLTree tree;
 
     // Construcción del árbol AVL
@@ -187,16 +182,6 @@ int main() {
     tree.insertar(40);
     tree.insertar(50);
     tree.insertar(25);
-
-    /*
-            Árbol AVL resultante:
-
-                  30
-                 /  \
-               20    40
-              / \      \
-            10  25      50
-    */
 
     cout << "Recorrido PreOrder del arbol AVL:" << endl;
 

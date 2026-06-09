@@ -49,13 +49,13 @@ class ArbolBinarioBusqueda{
     }
 };
 //funcion principal
-int manin(){
+int main(){
     ArbolBinarioBusqueda abb;
 
     abb.crearArbolEjemplo();
     int x = 12;
 
-    if( abb.buscar(x)) cout << "El valor " << x << "SI exuste ele en el arbool" <<  endl; 
+    if( abb.buscar(x)) cout << "El valor " << x << " SI existe ele en el arbool" <<  endl; 
     else cout << "El valor  "<< x << "NO existe en el arbol"<< endl;  
     
     return 0;

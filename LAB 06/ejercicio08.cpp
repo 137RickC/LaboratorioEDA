@@ -1,14 +1,11 @@
 #include <iostream>
 using namespace std;
-
 // Clase Árbol Red-Black
 class RedBlackTree {
 
 private:
-
     // Clase Nodo
     class Nodo {
-
     public:
         int data;
         char colour; // 'R' = Rojo, 'B' = Negro
@@ -30,13 +27,11 @@ private:
     };
 
     Nodo* root;
-
     // Banderas de rotación
     bool ll = false;
     bool rr = false;
     bool lr = false;
     bool rl = false;
-
     // Rotación izquierda
     Nodo* rotateLeft(Nodo* node) {
 
@@ -53,7 +48,6 @@ private:
 
         return x;
     }
-
     // Rotación derecha
     Nodo* rotateRight(Nodo* node) {
 
@@ -260,12 +254,10 @@ private:
     }
 
 public:
-
     // Constructor
     RedBlackTree() {
         root = nullptr;
     }
-
     // Método insertar
     void insert(int data) {
 
@@ -286,17 +278,12 @@ public:
 
     // Método recorrido inorder
     void inorderTraversal() {
-
         inorderTraversalHelper(root);
-
         cout << endl;
     }
 
     // Método imprimir árbol
-    void printTree() {
-
-        printTreeHelper(root, 0);
-    }
+    void printTree() { printTreeHelper(root, 0); }
 };
 
 // Función principal
@@ -314,12 +301,10 @@ int main() {
              << arr[i] << ":" << endl;
 
         tree.inorderTraversal();
-
         cout << endl;
     }
 
     cout << "Arbol Red-Black final:" << endl;
-
     tree.printTree();
 
     return 0;

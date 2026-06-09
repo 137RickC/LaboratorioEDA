@@ -17,13 +17,10 @@ public:
         right = nullptr;
     }
 };
-
 // Clase AVL
 class AVLTree {
-
 private:
     Nodo* root;
-
     // Obtener altura
     int height(Nodo* node) {
         if (node == nullptr)
@@ -31,7 +28,6 @@ private:
 
         return node->height;
     }
-
     // Máximo entre dos números
     int maximo(int a, int b) {
         return (a > b) ? a : b;
@@ -59,7 +55,6 @@ private:
         // Nueva raíz
         return leftChild;
     }
-
     // Rotación izquierda
     Nodo* leftRotate(Nodo* node) {
 
@@ -69,7 +64,6 @@ private:
         // Rotación
         rightChild->left = node;
         node->right = temp;
-
         // Actualizar alturas
         node->height =
             maximo(height(node->left),
@@ -78,7 +72,6 @@ private:
         rightChild->height =
             maximo(height(rightChild->left),
                     height(rightChild->right)) + 1;
-
         // Nueva raíz
         return rightChild;
     }

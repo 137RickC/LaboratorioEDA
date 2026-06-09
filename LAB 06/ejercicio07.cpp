@@ -20,7 +20,6 @@ public:
 
 // Clase AVL
 class AVLTree {
-
 private:
     Nodo* root;
 
@@ -32,12 +31,10 @@ private:
 
         return N->height;
     }
-
     // Máximo entre dos números
     int maximo(int a, int b) {
         return (a > b) ? a : b;
     }
-
     // Rotación derecha
     Nodo* rightRotate(Nodo* y) {
 
@@ -59,7 +56,6 @@ private:
 
         return x;
     }
-
     // Rotación izquierda
     Nodo* leftRotate(Nodo* x) {
 

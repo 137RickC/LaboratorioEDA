@@ -39,12 +39,6 @@ public:
     // Crear árbol de ejemplo
     void crearArbolEjemplo() {
 
-        //        10
-        //       /  \
-        //      5    15
-        //          /  \
-        //         12   18
-
         root = new Nodo(10);
         root->left = new Nodo(5);
         root->right = new Nodo(15);

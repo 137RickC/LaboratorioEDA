@@ -1,10 +1,7 @@
 #include <iostream>
-
 using namespace std;
-
 // Clase Nodo
 class Node {
-
 public:
 
     int data;
@@ -14,15 +11,12 @@ public:
     Node* left;
     Node* right;
 };
-
 // Clase Árbol Red-Black
 class RedBlackTree {
-
 private:
 
     Node* root;
     Node* TNULL;
-
     // Recorrido PreOrder
     void preOrderHelper(Node* node) {
 
