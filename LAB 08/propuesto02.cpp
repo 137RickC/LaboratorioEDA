@@ -10,7 +10,6 @@ public:
 
     TrieNode() {
         isEnd = false;
-
         for(int i = 0; i < 26; i++)
             children[i] = nullptr;
     }
@@ -27,11 +26,8 @@ private:
             cout << currentWord << endl;
 
         for(int i = 0; i < 26; i++) {
-
             if(node->children[i] != nullptr) {
-
                 char ch = 'a' + i;
-
                 displaySorted(
                     node->children[i],
                     currentWord + ch
@@ -41,32 +37,23 @@ private:
     }
 
 public:
-
-    Trie() {
-        root = new TrieNode();
-    }
+    Trie() { root = new TrieNode(); }
 
     void insert(string word) {
-
         TrieNode* current = root;
 
         for(char ch : word) {
-
             int index = ch - 'a';
-
             if(current->children[index] == nullptr)
                 current->children[index] = new TrieNode();
 
             current = current->children[index];
         }
-
         current->isEnd = true;
     }
 
     void sortWords() {
-
         cout << "Palabras ordenadas:\n";
-
         displaySorted(root, "");
     }
 };
