@@ -1,9 +1,6 @@
 #include <iostream>
 #include <vector>
-
-
 using namespace std;
-
 
 class DoubleHash {
 private:

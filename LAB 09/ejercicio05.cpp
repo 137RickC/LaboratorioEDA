@@ -3,7 +3,6 @@
 using namespace std;
 
 const int TABLE_SIZE = 26;
-
 class HashTable {
 private:
     struct Entry {
@@ -13,7 +12,6 @@ private:
         Entry(string k) : key(k), count(1), next(nullptr) {}
     };
     Entry* table[TABLE_SIZE];
-
     int hashFunction(const string& key) {
         int hash = 0;
         for (char c : key)
@@ -25,7 +23,6 @@ public:
         for (int i = 0; i < TABLE_SIZE; i++)
             table[i] = nullptr;
     }
-
     ~HashTable() {
         for (int i = 0; i < TABLE_SIZE; i++) {
             Entry* curr = table[i];

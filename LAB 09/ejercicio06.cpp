@@ -7,13 +7,10 @@ class Hash {
 private:
     int bucketCount;      // Número de depósitos
     int numOfElements;    // Número de elementos almacenados
-
     vector<vector<int>> table;
-
-
+    
     // Función hash
     int getHashIndex(int key) { return key % bucketCount; }
-
     // Calcular factor de carga
     float getLoadFactor() {
         return (float)numOfElements / bucketCount;
