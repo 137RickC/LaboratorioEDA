@@ -5,7 +5,7 @@ using namespace std;
 // Nodo Trie
 class TrieNode {
 public:
-    unordered_map<char, TrieNode*> children;
+    unordered_map<char, TrieNode*> children;//c - v
     bool isEnd;
     TrieNode() { isEnd = false; }
 };
@@ -48,7 +48,6 @@ public:
 };
 int main() {
     Trie trie;
-
     trie.insert("hello");
     trie.insert("help");
     trie.insert("hero");
