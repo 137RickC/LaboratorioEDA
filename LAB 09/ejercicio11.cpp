@@ -18,7 +18,6 @@ void createHashMap(int arr[], int n) {
             hmap[arr[i]]++;
         }
     }
-
     // Imprimir el HashMap
     cout << "{ ";
 
@@ -27,7 +26,6 @@ void createHashMap(int arr[], int n) {
     }
     cout << "}" << endl;
 }
-
 int main() {
     int arr[] = {10, 34, 5, 10, 3, 5, 10};
 
