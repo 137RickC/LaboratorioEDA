@@ -8,7 +8,6 @@ int main() {
         "Estructura", "Datos", "Algoritmos", "Hashing", "Universidad"
     };
 
-    std::cout << "\n--- Ejercicio 3: Elementos de unordered_set ---" << std::endl;
     // Recorremos e imprimimos los elementos
     for (const std::string& palabra : misPalabras) {
         std::cout << "- " << palabra << std::endl;
